@@ -4008,9 +4008,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PROVISIONING_PROFILE = "";
 			};
 			name = Localization;
 		};
@@ -4018,7 +4016,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: The Growl Project, LLC";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4035,7 +4032,6 @@
 				"OTHER_CFLAGS[arch=ppc64]" = "-fvisibility=default";
 				"OTHER_CFLAGS[arch=x86_64]" = "-fvisibility=default";
 				PRODUCT_NAME = Growl;
-				PROVISIONING_PROFILE = "";
 			};
 			name = Localization;
 		};
@@ -4064,6 +4060,7 @@
 				);
 				PRODUCT_NAME = Growl;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				WARNING_LDFLAGS = "-Wassign-intercept";
 			};
 			name = Localization;
@@ -4791,7 +4788,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: The Growl Project, LLC";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4808,7 +4804,6 @@
 				"OTHER_CFLAGS[arch=ppc64]" = "-fvisibility=default";
 				"OTHER_CFLAGS[arch=x86_64]" = "-fvisibility=default";
 				PRODUCT_NAME = Growl;
-				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -4816,7 +4811,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: The Growl Project, LLC";
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PREFIX_HEADER = Core/Source/Growl_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4830,7 +4824,6 @@
 				"OTHER_CFLAGS[arch=ppc64]" = "-fvisibility=default";
 				"OTHER_CFLAGS[arch=x86_64]" = "-fvisibility=default";
 				PRODUCT_NAME = Growl;
-				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -4859,6 +4852,7 @@
 				);
 				PRODUCT_NAME = Growl;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				WARNING_LDFLAGS = "-Wassign-intercept";
 			};
 			name = Debug;
@@ -4868,6 +4862,7 @@
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -4887,7 +4882,9 @@
 					0xC0000000,
 				);
 				PRODUCT_NAME = Growl;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				WARNING_LDFLAGS = "-Wassign-intercept";
 			};
 			name = Release;
@@ -4896,9 +4893,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};

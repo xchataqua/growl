@@ -1,5 +1,6 @@
 # Mercurial stuffs
 .hg*
+hgRevision.h
 
 # Backup files from text editors
 *~
