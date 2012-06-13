@@ -29,7 +29,7 @@ VALID_ARCHS = i386 x86_64
 //warnings 
 // -- no-format-nonliteral is /required/ for our CF extensions to compile with -Wall -Werror -Wformat enabled.
 //    If it is not there, all NSLog(CFSTR()) calls in .c files will generate an error. :(
-WARNING_CFLAGS = -Wall -Wextra -Wpointer-arith -Wformat=2 -Wfloat-equal -Wstrict-overflow=4 -Wbad-function-cast -Winline -Wstrict-aliasing -Wno-unused-parameter -Wno-format-nonliteral -Wno-multichar -Wno-arc-performSelector-leaks
+//WARNING_CFLAGS = -Wall -Wextra -Wpointer-arith -Wformat=2 -Wfloat-equal -Wstrict-overflow=4 -Wbad-function-cast -Winline -Wstrict-aliasing -Wno-unused-parameter -Wno-format-nonliteral -Wno-multichar -Wno-arc-performSelector-leaks
 
 GCC_WARN_SIGN_COMPARE = YES
 GCC_ENABLE_FIX_AND_CONTINUE = NO
@@ -51,7 +51,7 @@ GCC_WARN_SHADOW = YES
 GCC_WARN_UNUSED_FUNCTION = YES
 GCC_WARN_UNUSED_LABEL = YES
 
-GCC_TREAT_WARNINGS_AS_ERRORS = YES
+//GCC_TREAT_WARNINGS_AS_ERRORS = YES
 
 //plist
 INFOPLIST_OTHER_PREPROCESSOR_FLAGS = -traditional -CC -I "$(TARGET_BUILD_DIR)/include"

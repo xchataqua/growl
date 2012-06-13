@@ -727,6 +727,7 @@
 		34F60EC2078E1D5600CECA86 /* Growl.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = Growl.h; path = Framework/Source/Growl.h; sourceTree = "<group>"; };
 		34F909330EC1FAAE00566EE6 /* GrowlOperatingSystemVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GrowlOperatingSystemVersion.h; path = Common/Source/GrowlOperatingSystemVersion.h; sourceTree = "<group>"; };
 		34F909340EC1FAAE00566EE6 /* GrowlOperatingSystemVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GrowlOperatingSystemVersion.m; path = Common/Source/GrowlOperatingSystemVersion.m; sourceTree = "<group>"; };
+		38E468E71588603B000E006E /* HgRevision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HgRevision.h; sourceTree = "<group>"; };
 		52861FEF06DC463E00D3A356 /* GrowlDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; name = GrowlDefaults.plist; path = Core/Resources/GrowlDefaults.plist; sourceTree = "<group>"; };
 		5286205506DC4C2F00D3A356 /* GrowlPluginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GrowlPluginController.h; path = Core/Source/GrowlPluginController.h; sourceTree = "<group>"; };
 		5286205606DC4C2F00D3A356 /* GrowlPluginController.m */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GrowlPluginController.m; path = Core/Source/GrowlPluginController.m; sourceTree = "<group>"; };
@@ -1564,6 +1565,7 @@
 			isa = PBXGroup;
 			children = (
 				93E01DF413C93C6000885286 /* Growl.entitlements */,
+				38E468E71588603B000E006E /* HgRevision.h */,
 				93EA7FF61369089600AB89AE /* xcconfig */,
 				93254753104E135B00130D3B /* external_dependencies */,
 				953C3EFE0747970800F2A737 /* Documentation */,
