@@ -1,22 +1,27 @@
-# Mercurial stuffs
-.hg*
-
-# Backup files from text editors
-*~
-.*.swp
-
-# Xcode crap
-*pbxuser
-*perspectivev3
-*xcuserdata
-project.xcworkspace
-
-# Junk files on Mac OS X
-*.DS_Store
-
-# build output
 build
+*.swp
 
-# built library to avoid xcode4 archieve error
-Frameworks/SGPalette.ibplugin
+*.mode1
+*.mode1v3
+*.mode2
+*.mode2v3
+*.pbxuser
+*.perspective
+*.perspectivev3
+xcuserdata
+*.xcworkspace
 
+*~.nib
+
+.DS_Store
+Icon?
+
+external_dependencies
+
+Release/distribution
+DerivedData
+project.pbxproj.orig
+
+*.orig
+
+.hg*

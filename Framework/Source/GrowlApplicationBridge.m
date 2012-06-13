@@ -28,6 +28,7 @@
 #import <ApplicationServices/ApplicationServices.h>
 
 #define GROWL_FRAMEWORK_MIST_ENABLE @"com.growl.growlframework.mist.enabled"
+#define GROWL_FRAMEWORK_MIST_DEFAULT_ONLY @"com.growl.growlframework.mist.defaultonly"
 
 @interface GrowlApplicationBridge (PRIVATE)
 
@@ -296,6 +297,45 @@ static BOOL    shouldUseBuiltInNotifications = YES;
    }
 }
 
++ (BOOL)isNotificationDefaultEnabled:(NSDictionary*)growlDict
+{
+   NSDictionary *regDict = [self bestRegistrationDictionary];
+   //Sanity check, shouldn't happen, just in case
+   if(!regDict)
+      return NO;
+   
+   BOOL result = NO;
+   id defaultNotes = [regDict valueForKey:GROWL_NOTIFICATIONS_DEFAULT];
+   NSString *name = [growlDict valueForKey:GROWL_NOTIFICATION_NAME];
+   NSUInteger indexInAll = [[regDict valueForKey:GROWL_NOTIFICATIONS_ALL] indexOfObject:name];
+   
+   //If its not in all notes, its definitely not a default note
+   if(indexInAll != NSNotFound) 
+   {
+      //If its an index set, see if the index of the name in all notes is in the set
+      if([defaultNotes isKindOfClass:[NSIndexSet class]]) 
+      {
+         if([defaultNotes containsIndex:indexInAll])
+            result = YES;
+      } //If its an array, it should be either an array of indexes, or an array of names, if there arent any notes, its not there
+      else if([defaultNotes isKindOfClass:[NSArray class]] && [defaultNotes count] > 0) 
+      {
+         //If first one is a number, its a numeric index array of defaults, if its a string, its an array of notification names
+         if([[defaultNotes objectAtIndex:0] isKindOfClass:[NSNumber class]]) 
+         {
+            if([defaultNotes containsObject:[NSNumber numberWithUnsignedInteger:indexInAll]])
+               result = YES;
+         }
+         else if([[defaultNotes objectAtIndex:0] isKindOfClass:[NSString class]]) 
+         {
+            if([defaultNotes containsObject:name])
+               result = YES;
+         }
+      }
+   }
+   return result;
+}
+
 + (BOOL)isMistEnabled
 {
     BOOL result = shouldUseBuiltInNotifications;
@@ -322,7 +362,14 @@ static BOOL    shouldUseBuiltInNotifications = YES;
 }
 
 + (void) _fireMiniDispatch:(NSDictionary*)growlDict
-{   
+{
+   BOOL defaultOnly = YES;
+   if([[NSUserDefaults standardUserDefaults] valueForKey:GROWL_FRAMEWORK_MIST_DEFAULT_ONLY])
+      defaultOnly = [[[NSUserDefaults standardUserDefaults] valueForKey:GROWL_FRAMEWORK_MIST_DEFAULT_ONLY] boolValue];
+   
+   if (![self isNotificationDefaultEnabled:growlDict] && defaultOnly)
+      return;
+   
    if (!miniDispatch) {
       miniDispatch = [[GrowlMiniDispatch alloc] init];
       miniDispatch.delegate = [GrowlApplicationBridge growlDelegate];

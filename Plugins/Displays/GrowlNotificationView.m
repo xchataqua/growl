@@ -67,9 +67,16 @@
 }
 
 - (void) mouseUp:(NSEvent *)event {
-	mouseOver = NO;
-	if (target && action && [target respondsToSelector:action])
-		[target performSelector:action withObject:self];
+	if([event clickCount] == 1) {
+        mouseOver = NO;
+
+        if (target && action && [target respondsToSelector:action])
+            [target performSelector:action withObject:self];
+    }
+}
+
+- (void)rightMouseUp:(NSEvent *)theEvent {
+    [self clickedCloseBox:self];
 }
 
 static NSButton *gCloseButton;
