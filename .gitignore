@@ -3,7 +3,7 @@
 .hgignore
 .hgsub*
 .hgtags
-hgRevision.h
+HgRevision.h
 build
 *.swp
 
