@@ -17,8 +17,8 @@ HEADERPATH="$PROJECT_DIR/hgRevision.h"
 REVISION=`hg parent --template="{rev}\n" | head -n1`
 if [[ "x$REVISION" = "x" ]]; then
 	#This is not an hg repository. It's probably an archive. Try to determine the archived revision.
-	REVISION=`/usr/bin/sed -E -n '/^node:/{ s/node: //; s/^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]).*/\1/; p; q; }' < "${SRCROOT}/.hg_archival.txt"`
-	if [[ "x$REVISION" = "x" ]]; then
+REVISION=`/usr/bin/sed -E -n '/^node:/{ s/node: //; s/^([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]).*/0x\1/; p; q; }' < "${SRCROOT}/.hg_archival.txt"`
+if [[ "x$REVISION" = "x" ]]; then
 		#Not an archive, either. Weird.
 		REVISION=0
 	fi

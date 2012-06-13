@@ -31,7 +31,7 @@
    }
    else if (newType == XPC_TYPE_ARRAY) {
       nsValue = [NSMutableArray arrayWithCapacity:xpc_array_get_count(object)];
-      xpc_array_apply(object, ^_Bool(size_t index, xpc_object_t obj) {
+      xpc_array_apply(object, ^_Bool(size_t indexValue, xpc_object_t obj) {
          [nsValue addObject:[self xpcObjectToNSObject:obj]];
          return true;
       });
@@ -96,7 +96,7 @@
    }else if ([self isKindOfClass:[NSNumber class]]){
       if(self == (NSNumber *)kCFBooleanTrue){
          returnVal = xpc_bool_create(true);
-      }else if(self == (NSNumber *)kCFBooleanTrue){
+      }else if(self == (NSNumber *)kCFBooleanFalse){
          returnVal = xpc_bool_create(false);
       }else{
          const char* objCType = [(NSNumber*)self objCType];

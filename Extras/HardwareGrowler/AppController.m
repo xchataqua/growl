@@ -88,6 +88,7 @@
 #define PreferencesTitle NSLocalizedString(@"Preferences...", nil)
 #define OpenPreferencesTitle NSLocalizedString(@"Open HardwareGrowler Preferences...", nil)
 #define IconTitle NSLocalizedString(@"Icon:", nil)
+#define StartAtLoginTitle NSLocalizedString(@"Start HardwareGrowler at Login:", nil)
 
 
 static io_connect_t			powerConnection;
@@ -634,7 +635,7 @@ static void powerCallback(void *refcon, io_service_t service, natural_t messageT
 }
 
 @implementation AppController
-@synthesize showDevices, groupNetworkTitle, quitTitle, preferencesTitle, openPreferencesTitle, iconTitle;
+@synthesize showDevices, groupNetworkTitle, quitTitle, preferencesTitle, openPreferencesTitle, iconTitle, startAtLoginTitle;
 @synthesize prefsWindow;
 @synthesize iconOptions;
 @synthesize onLoginSegmentedControl;
@@ -740,11 +741,15 @@ static void powerCallback(void *refcon, io_service_t service, natural_t messageT
 	statusItem = [[[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength] retain];
 	[statusItem setMenu:statusMenu];
 
-	NSString* icon_path = [[NSBundle mainBundle] pathForResource:@"hwgrowler_statusbar_icn" ofType:@"png"];
+	NSString* icon_path = [[NSBundle mainBundle] pathForResource:@"menubarIcon_Normal" ofType:@"png"];
+	NSString* icon_path_selected = [[NSBundle mainBundle] pathForResource:@"menubarIcon_Selected" ofType:@"png"];    
 	NSImage *icon = [[NSImage alloc] initWithContentsOfFile:icon_path];
+	NSImage *icon_selected = [[NSImage alloc] initWithContentsOfFile:icon_path_selected];
 	
 	[statusItem setImage:icon];
-	[icon release];
+    [statusItem setAlternateImage:icon_selected];
+    [icon release];
+    [icon_selected release];
 	
 	[statusItem setHighlightMode:YES];
 
@@ -766,6 +771,7 @@ static void powerCallback(void *refcon, io_service_t service, natural_t messageT
 	self.preferencesTitle = PreferencesTitle;
 	self.openPreferencesTitle = OpenPreferencesTitle;
 	self.iconTitle = IconTitle;
+	self.startAtLoginTitle = StartAtLoginTitle;
 }
 
  #ifdef BETA
@@ -895,7 +901,7 @@ static void powerCallback(void *refcon, io_service_t service, natural_t messageT
     {
         
             NSNumber *value = [[[NSUserDefaultsController sharedUserDefaultsController] defaults] valueForKey:@"Visibility"];
-            NSInteger index = [value integerValue];
+            NSInteger index   = [value integerValue];
             switch (index) {
                 case kDontShowIcon:
                     [NSApp activateIgnoringOtherApps:YES];

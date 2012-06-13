@@ -18,7 +18,7 @@
 #import "GrowlOperatingSystemVersion.h"
 #import "GNTPKey.h"
 #import "GrowlDefinesInternal.h"
-#import <SystemConfiguration/SCDynamicStoreCopySpecific.h>
+#import "GrowlNetworkUtilities.h"
 
 #if GROWLHELPERAPP
 
@@ -35,6 +35,13 @@
 
 @implementation GrowlOkGNTPPacket
 @synthesize responseAction;
+
+- (void)dealloc
+{
+	[responseAction release];
+	
+	[super dealloc];
+}
 
 - (GrowlReadDirective)receivedHeaderItem:(GrowlGNTPHeaderItem *)headerItem
 {
@@ -132,7 +139,11 @@
 	[pendingBinaryIdentifiers release];
 	[packetID release];
 	[customHeaders release];
-
+	[error release];
+	[mKey release];
+	[currentBinaryIdentifier release];
+	[connectedHost release];
+	
 	[super dealloc];
 }
 
@@ -145,8 +156,11 @@
 {
 	if (!packetID) {
 		CFUUIDRef uuidRef = CFUUIDCreate(kCFAllocatorDefault);
-		packetID = (NSString *)CFUUIDCreateString(kCFAllocatorDefault, uuidRef);
-		CFRelease(uuidRef);
+        if(uuidRef)
+		{
+            packetID = (NSString *)CFUUIDCreateString(kCFAllocatorDefault, uuidRef);
+            CFRelease(uuidRef);
+        }
 	}		
 	return packetID;
 }
@@ -529,12 +543,7 @@
 
 + (void)addSentAndReceivedHeadersFromDict:(NSDictionary *)dict toArray:(NSMutableArray *)headersArray
 {
-    CFStringRef cfHostName = SCDynamicStoreCopyLocalHostName(NULL);
-	NSString *hostName = [[(NSString*)cfHostName copy] autorelease];
-    CFRelease(cfHostName);
-	if ([hostName hasSuffix:@".local"]) {
-		hostName = [hostName substringToIndex:([hostName length] - [@".local" length])];
-	}
+	NSString *hostName = [GrowlNetworkUtilities localHostName];
 
 	/* Previous received headers */
 	for (NSString *received in [dict valueForKey:GROWL_NOTIFICATION_GNTP_RECEIVED]) {
@@ -602,12 +611,7 @@
 	NSArray *receivedHeaders = [[self growlDictionary] objectForKey:GROWL_NOTIFICATION_GNTP_RECEIVED];
 	NSString *myHostString;
 
-    CFStringRef cfHostName = SCDynamicStoreCopyLocalHostName(NULL);
-	NSString *hostName = [[(NSString*)cfHostName copy] autorelease];
-    CFRelease(cfHostName);
-	if ([hostName hasSuffix:@".local"]) {
-		hostName = [hostName substringToIndex:([hostName length] - [@".local" length])];
-	}
+   NSString *hostName = [GrowlNetworkUtilities localHostName];
 	
 	/* Check if this host received it previously */
 	myHostString = [NSString stringWithFormat:@"by %@", hostName];
