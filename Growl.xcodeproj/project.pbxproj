@@ -2768,7 +2768,7 @@
 		089C1669FE841209C02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "The Growl Project";
 			};
 			buildConfigurationList = 95EE27910855AA6C0045DB39 /* Build configuration list for PBXProject "Growl" */;
@@ -4008,7 +4008,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PROVISIONING_PROFILE = "";
 			};
@@ -4019,6 +4025,7 @@
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: The Growl Project, LLC";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4044,6 +4051,8 @@
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -4063,6 +4072,7 @@
 					0xC0000000,
 				);
 				PRODUCT_NAME = Growl;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 				WARNING_LDFLAGS = "-Wassign-intercept";
 			};
@@ -4072,6 +4082,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4093,6 +4104,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4114,6 +4126,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4135,6 +4148,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				HEADER_SEARCH_PATHS = Source;
 				INFOPLIST_FILE = Plugins/Displays/iCal/Info.plist;
@@ -4152,6 +4166,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4173,6 +4188,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4194,6 +4210,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4215,6 +4232,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4248,6 +4266,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4269,6 +4288,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4290,6 +4310,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 315C88BB1068F9A200880530 /* Localization.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -4315,6 +4336,7 @@
 					ppc,
 					x86_64,
 				);
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
@@ -4343,6 +4365,7 @@
 					ppc,
 					x86_64,
 				);
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -4366,6 +4389,7 @@
 					ppc,
 					x86_64,
 				);
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
@@ -4385,6 +4409,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				HEADER_SEARCH_PATHS = Source;
 				INFOPLIST_FILE = Plugins/Displays/Nano/Info.plist;
@@ -4402,6 +4427,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4423,6 +4449,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -4443,6 +4470,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -4463,6 +4491,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				HEADER_SEARCH_PATHS = Source;
 				INFOPLIST_FILE = Plugins/Displays/Brushed/Info.plist;
@@ -4480,6 +4509,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4501,6 +4531,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				HEADER_SEARCH_PATHS = Source;
 				INFOPLIST_FILE = Plugins/Displays/Bubbles/Info.plist;
@@ -4518,6 +4549,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4539,6 +4571,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				HEADER_SEARCH_PATHS = Source;
 				INFOPLIST_FILE = Plugins/Displays/Bezel/Info.plist;
@@ -4556,6 +4589,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4577,6 +4611,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				HEADER_SEARCH_PATHS = Source;
 				INFOPLIST_FILE = Plugins/Displays/Speech/Info.plist;
@@ -4594,6 +4629,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4615,6 +4651,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				HEADER_SEARCH_PATHS = Source;
 				INFOPLIST_FILE = Plugins/Displays/Smoke/Info.plist;
@@ -4632,6 +4669,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4653,6 +4691,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				HEADER_SEARCH_PATHS = Source;
 				INFOPLIST_FILE = Plugins/Displays/MailMe/Info.plist;
@@ -4682,6 +4721,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4715,6 +4755,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				HEADER_SEARCH_PATHS = Source;
 				INFOPLIST_FILE = Plugins/Displays/MusicVideo/Info.plist;
@@ -4732,6 +4773,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4753,6 +4795,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				HEADER_SEARCH_PATHS = source;
 				INFOPLIST_FILE = Plugins/Displays/SMS/Info.plist;
@@ -4770,6 +4813,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					NDEBUG,
@@ -4792,6 +4836,7 @@
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: The Growl Project, LLC";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -4817,6 +4862,7 @@
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: The Growl Project, LLC";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_ENABLE_OBJC_GC = unsupported;
 				GCC_PREFIX_HEADER = Core/Source/Growl_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -4839,6 +4885,8 @@
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -4858,6 +4906,7 @@
 					0xC0000000,
 				);
 				PRODUCT_NAME = Growl;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 				WARNING_LDFLAGS = "-Wassign-intercept";
 			};
@@ -4868,6 +4917,8 @@
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
@@ -4887,6 +4938,7 @@
 					0xC0000000,
 				);
 				PRODUCT_NAME = Growl;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 				WARNING_LDFLAGS = "-Wassign-intercept";
 			};
@@ -4896,7 +4948,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PROVISIONING_PROFILE = "";
 			};
@@ -4906,7 +4964,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PROVISIONING_PROFILE = "";
 			};
@@ -4916,6 +4980,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFD136908B100AB89AE /* Debug.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				HEADER_SEARCH_PATHS = Source;
 				INFOPLIST_FILE = Plugins/Displays/iCal/Info.plist;
@@ -4933,6 +4998,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 93EA7FFE136908B100AB89AE /* Release.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "Plugins/Displays/Display Plugins_Prefix.pch";
 				HEADER_SEARCH_PATHS = Source;
 				INFOPLIST_FILE = Plugins/Displays/iCal/Info.plist;
@@ -4951,6 +5017,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -4983,6 +5050,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -5014,6 +5082,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
